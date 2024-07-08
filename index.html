@@ -48,23 +48,23 @@
         <h2>Login</h2>
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
-        <button onclick="login()">Login</button>
+        <button id="loginButton">Login</button>
     </div>
 
     <script>
-        function login() {
+        document.getElementById('loginButton').addEventListener('click', function() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
             const validEmail = "user";
-            const validPassword = "1234";
+            const validPassword = "123";
 
             if (email === validEmail && password === validPassword) {
                 window.location.href = "https://www.google.com";
             } else {
                 alert("Invalid email or password");
             }
-        }
+        });
     </script>
 </body>
 </html>
